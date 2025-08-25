@@ -1,6 +1,7 @@
 # Windows Terminal Hook Hotkey
 
-Simply utility to open the current directory in Windows Terminal with ``Ctrl + \`` hotkey.
+Simply utility to open the current directory in Windows Terminal with `` Ctrl + ` `` hotkey.
+This emulates the behavior of IDEs like VSCode.
 
 ## How it works
 
