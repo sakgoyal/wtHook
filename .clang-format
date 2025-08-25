@@ -1,0 +1,22 @@
+---
+AlignEscapedNewlines: Left
+AlignTrailingComments:
+    Kind: Always
+    OverEmptyLines: 0
+BasedOnStyle: LLVM
+BreakBeforeBraces: Custom
+BreakBeforeInheritanceComma: true
+BreakConstructorInitializers: BeforeComma
+IndentPPDirectives: AfterHash
+IndentRequiresClause: false
+InsertNewlineAtEOF: true
+NamespaceIndentation: None
+QualifierAlignment: Left
+RemoveSemicolon: true
+RequiresClausePosition: WithFollowing
+RequiresExpressionIndentation: OuterScope
+SpaceAfterTemplateKeyword: false
+ColumnLimit: 0
+IndentWidth: 4
+UseTab: Always
+TabWidth: 4

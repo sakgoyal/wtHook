@@ -1,0 +1,13 @@
+CompileFlags:
+  Add:
+    - -Wno-unused-variable
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Wshadow
+    - -std=c++23
+    - -Iole32.lib
+    - -Ioleaut32.lib
+    - -Ishell32.lib
+    - -Ipsapi.lib
+    - -Iuser32.lib
