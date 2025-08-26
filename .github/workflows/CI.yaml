@@ -1,0 +1,30 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up MSVC Developer PowerShell
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Build hotkey.exe
+        shell: pwsh
+        run: clang-cl hotkey.cpp /EHsc /MD /W4 /std:c++latest /O2 /Gw /Gy /Fe:hotkey.exe
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: "v${{ github.run_number }}"
+          files: hotkey.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
